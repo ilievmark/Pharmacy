@@ -24,6 +24,7 @@ namespace Pharmacy.DAL
         [ForeignKey(nameof(PriceId))]
         public PriceEntity Price { get; set; }
 
+        [Required]
         public int Count { get; set; }
     }
 }

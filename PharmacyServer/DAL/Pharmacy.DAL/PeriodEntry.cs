@@ -11,10 +11,12 @@ namespace Pharmacy.DAL
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
         public DateTime Start { get; set; }
 
-        public DateTime End { get; set; }
+        public DateTime? End { get; set; }
 
+        [Required]
         public List<CheckEntity> ClosedChecks { get; set; }
     }
 }

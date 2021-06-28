@@ -11,8 +11,13 @@ namespace Pharmacy.DAL
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
+        public int PeriodId { get; set; }
+
+        [Required]
         public DateTime Date { get; set; }
 
+        [Required]
         public List<PharmacySelledEntity> SelledItems { get; set; }
     }
 }

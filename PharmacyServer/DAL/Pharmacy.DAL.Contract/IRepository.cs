@@ -6,13 +6,13 @@ namespace Pharmacy.DAL.Contract
 {
     public interface IRepository<T> where T : IEntity
     {
-        Task<IEnumerator<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAllAsync();
 
-        Task<IEnumerator<T>> GetWhereAsync(Func<T, bool> predicate);
+        Task<T> GetWhereAsync(Func<T, bool> predicate);
 
-        Task RemoveWhereAsync(Func<T, bool> predicate);
+        void Remove(T entity);
 
-        Task UpdateAsync(T entity);
+        void Update(T entity);
 
         Task AddAsync(T entity);
     }

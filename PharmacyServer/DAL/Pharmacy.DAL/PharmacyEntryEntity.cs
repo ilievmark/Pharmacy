@@ -19,8 +19,10 @@ namespace Pharmacy.DAL
         [Required]
         public DateTime ExpirationDate { get; set; }
 
+        [Required]
         public int Count { get; set; }
 
+        [Required]
         public EntryStatus Status { get; set; }
     }
 }

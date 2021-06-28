@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Pharmacy.DAL.Contract
 {
@@ -12,5 +13,8 @@ namespace Pharmacy.DAL.Contract
             where T : IEntity
                 => @this.RemoveWhereAsync(e => e.Id == id);
 
+        public static async Task RemoveWhereAsync<T>(this IRepository<T> @this, Func<T, bool> predicate)
+            where T : IEntity
+                => @this.Remove(await @this.GetWhereAsync(predicate));
     }
 }
