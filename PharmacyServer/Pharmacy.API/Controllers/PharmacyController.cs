@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pharmacy.BL.Contract;
-using Pharmacy.BL;
 using Pharmacy.Domain;
+using Pharmacy.Domain.Requests;
 
 namespace Pharmacy.API.Controllers
 {
@@ -19,8 +19,22 @@ namespace Pharmacy.API.Controllers
             _pharmacyService = pharmacyService;
         }
 
-        [HttpGet, Route("logIn")]
-        public async Task<ActionResult> LogInAsync([FromRoute] OrderType order)
+        [HttpGet, Route("pharmacy")]
+        public async Task<ActionResult> GetAllPharmacyAsync(string name, string category, decimal price)
+        {
+            var serverResult = new ApiResult<string>();
+            return Ok(serverResult);
+        }
+
+        [HttpGet, Route("pharmacy/critical")]
+        public async Task<ActionResult> GetCriticalPharmacyAsync(int maxDays, string name, string category, decimal price)
+        {
+            var serverResult = new ApiResult<string>();
+            return Ok(serverResult);
+        }
+
+        [HttpPost, Route("pharmacy")]
+        public async Task<ActionResult> CreatePharmacyAsync([FromBody] CreatePharmacyRequest createPharmacyRequest)
         {
             var serverResult = new ApiResult<string>();
             return Ok(serverResult);

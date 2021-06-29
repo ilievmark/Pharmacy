@@ -3,6 +3,7 @@
     public enum EntryStatus
     {
         Available,
-        Returned
+        Returned,
+        Expired
     }
 }
