@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pharmacy.BL\Pharmacy.BL.csproj" />
+    <ProjectReference Include="..\..\DAL\Pharmacy.DAL\Pharmacy.DAL.csproj" />
   </ItemGroup>
 </Project>

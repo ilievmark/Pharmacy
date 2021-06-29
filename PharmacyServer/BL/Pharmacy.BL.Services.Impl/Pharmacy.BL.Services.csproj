@@ -4,4 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pharmacy.BL.Services\Pharmacy.BL.Contract.csproj" />
+  </ItemGroup>
 </Project>

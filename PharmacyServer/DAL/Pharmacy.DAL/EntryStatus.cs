@@ -2,7 +2,6 @@
 {
     public enum EntryStatus
     {
-        Selled,
         Available,
         Returned
     }

@@ -1,9 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pharmacy.DAL;
 
 namespace Pharmacy.BL.Contract
 {
     public interface IPharmacyService
     {
-        Task<> GetOrderedAsync(OrderType orderType);
+        Task<IEnumerable<PharmacyEntity>> GetOrderedAsync(OrderType orderType);
     }
 }
