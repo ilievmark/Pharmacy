@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PharmacyServer\Pharmacy.Core\Pharmacy.Domain.csproj" />
+    <ProjectReference Include="..\Pharmacy.API.Contract\Pharmacy.API.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

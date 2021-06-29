@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pharmacy.BL", "..\PharmacyS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6E2057C2-2F86-40ED-B161-B8DFA2F091B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.API.Contract", "Pharmacy.API.Contract\Pharmacy.API.Contract.csproj", "{C34BA888-AE51-4FD7-A5B8-5063DE0BE557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pharmacy.API.Contract", "Pharmacy.API.Contract\Pharmacy.API.Contract.csproj", "{C34BA888-AE51-4FD7-A5B8-5063DE0BE557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.API", "Pharmacy.API\Pharmacy.API.csproj", "{E1D8E710-F95A-4BB7-B922-FD9F30D6124E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C34BA888-AE51-4FD7-A5B8-5063DE0BE557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34BA888-AE51-4FD7-A5B8-5063DE0BE557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34BA888-AE51-4FD7-A5B8-5063DE0BE557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D8E710-F95A-4BB7-B922-FD9F30D6124E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D8E710-F95A-4BB7-B922-FD9F30D6124E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D8E710-F95A-4BB7-B922-FD9F30D6124E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D8E710-F95A-4BB7-B922-FD9F30D6124E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{C2C9471C-AD30-4E5F-8A2E-662796F43917} = {AA6EAD3B-0FD7-4CDF-BD30-2FB470A561CC}
 		{CA350F27-5362-4FB3-90BF-54AEFF6AAF50} = {AA6EAD3B-0FD7-4CDF-BD30-2FB470A561CC}
 		{C34BA888-AE51-4FD7-A5B8-5063DE0BE557} = {6E2057C2-2F86-40ED-B161-B8DFA2F091B3}
+		{E1D8E710-F95A-4BB7-B922-FD9F30D6124E} = {6E2057C2-2F86-40ED-B161-B8DFA2F091B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE2EC9C6-95FC-44F0-8F7B-A7E145641D4C}
