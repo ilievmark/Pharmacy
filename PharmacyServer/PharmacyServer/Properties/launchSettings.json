@@ -7,7 +7,7 @@
     "PharmacyServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:11570",
+      "applicationUrl": "http://localhost:34498",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
