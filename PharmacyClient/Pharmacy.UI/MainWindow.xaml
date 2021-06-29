@@ -14,7 +14,13 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Button Command="{Binding ViewPharmacy}"/>
+        <Button Command="{Binding ViewPharmacy}" Margin="-87,-154,-83,87">
+            <Label Content="Pharmacy list" />
+        </Button>
+
+        <Button Command="{Binding ViewReports}" Margin="-87,-67,-83,0">
+            <Label Content="Reports" />
+        </Button>
 
     </Grid>
 </Window>
