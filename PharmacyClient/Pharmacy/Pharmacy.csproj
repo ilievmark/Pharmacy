@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pharmacy.UI.ViewModel\Pharmacy.UI.ViewModel.csproj" />
+    <ProjectReference Include="..\Pharmacy.UI\Pharmacy.UI.csproj" />
+  </ItemGroup>
+
+</Project>
