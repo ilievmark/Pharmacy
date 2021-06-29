@@ -15,14 +15,7 @@ namespace Pharmacy.API.Controllers
         }
 
         [HttpGet, Route("period")] // by category
-        public async Task<ActionResult> GetPeriodAsync(DateTime start, DateTime end)
-        {
-            var serverResult = new ApiResult<string>();
-            return Ok(serverResult);
-        }
-
-        [HttpGet, Route("period/report")] // by category
-        public async Task<ActionResult> GetPeriodAsync(string category, DateTime start, DateTime end)
+        public async Task<ActionResult> GetPeriodAsync(DateTime start, DateTime end, string category)
         {
             var serverResult = new ApiResult<string>();
             return Ok(serverResult);
