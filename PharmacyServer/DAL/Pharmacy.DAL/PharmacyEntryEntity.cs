@@ -17,12 +17,24 @@ namespace Pharmacy.DAL
         public PharmacyEntity Pharmacy { get; set; }
 
         [Required]
+        public int PriceId { get; set; }
+
+        [ForeignKey(nameof(PriceId))]
+        public PriceEntity Price { get; set; }
+
+        [Required]
         public DateTime ExpirationDate { get; set; }
+
+        [Required]
+        public DateTime EntryDate { get; set; }
 
         [Required]
         public int Count { get; set; }
 
         [Required]
         public EntryStatus Status { get; set; }
+
+        [Required]
+        public string Provider { get; set; }
     }
 }
