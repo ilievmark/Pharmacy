@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pharmacy.BL\Pharmacy.BL.csproj" />
+    <ProjectReference Include="..\..\DAL\Pharmacy.DAL\Pharmacy.DAL.csproj" />
+  </ItemGroup>
+</Project>
