@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pharmacy.BL.Services\Pharmacy.BL.Contract.csproj" />
+    <ProjectReference Include="..\..\DAL\Pharmacy.DAL.Contract\Pharmacy.DAL.Contract.csproj" />
   </ItemGroup>
 </Project>
