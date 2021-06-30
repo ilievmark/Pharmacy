@@ -13,10 +13,10 @@ namespace Pharmacy.API.Controllers
     [ApiController]
     public class ReportController : ControllerBase
     {
-        private readonly IPerionService _perionService;
+        private readonly IPeriodService _perionService;
 
         public ReportController(
-            IPerionService perionService)
+            IPeriodService perionService)
         {
             _perionService = perionService;
         }

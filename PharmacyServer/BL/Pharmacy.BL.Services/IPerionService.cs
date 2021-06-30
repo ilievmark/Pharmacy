@@ -4,7 +4,7 @@ using Pharmacy.DAL;
 
 namespace Pharmacy.BL.Contract
 {
-    public interface IPerionService
+    public interface IPeriodService
     {
         Task<PeriodEntity> OpenPeriodAsync(DateTime start);
     }

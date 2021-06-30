@@ -28,6 +28,7 @@ namespace PharmacyServer
             });
 
             services.AddScoped<IPharmacyService, PharmacyService>();
+            services.AddScoped<IPeriodService, PeriodService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -6,11 +6,11 @@ using Pharmacy.DAL.Contract;
 
 namespace Pharmacy.BL.Services
 {
-    public class PerionService : IPerionService
+    public class PeriodService : IPeriodService
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public PerionService(IUnitOfWork unitOfWork)
+        public PeriodService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
