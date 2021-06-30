@@ -6,6 +6,6 @@ namespace Pharmacy.BL.Contract
 {
     public interface IPharmacyService
     {
-        Task<IEnumerable<PharmacyEntity>> GetOrderedAsync(OrderType orderType);
+        Task<IEnumerable<PharmacyEntity>> GetOrderedAsync();
     }
 }
