@@ -1,10 +1,11 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Pharmacy.API.Contract;
+using Pharmacy.DAL;
 using Pharmacy.Domain;
 using Pharmacy.Domain.Extensions;
+using Pharmacy.Domain.Requests;
 using Pharmacy.Domain.Responses;
 
 namespace Pharmacy.API
@@ -13,6 +14,12 @@ namespace Pharmacy.API
     {
         public ReportApi(HttpClient client) : base(client)
         {
+        }
+
+        public Task<ApiResult<PeriodEntity>> AddPeriod(CreatePeriodRequest request, CancellationToken token)
+        {
+            return _client.PostAsync(GetRequestUrl($"Report/period"), request, token)
+                          .ReadAsJsonAsync<ApiResult<PeriodEntity>>();
         }
 
         public Task<ApiResult<PeriodReportResponse>> GetReportPeriodAsync(int periodId, string category, CancellationToken token)
