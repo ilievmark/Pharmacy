@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pharmacy.API.Contract\Pharmacy.API.Contract.csproj" />
+    <ProjectReference Include="..\Pharmacy.API\Pharmacy.API.csproj" />
     <ProjectReference Include="..\Pharmacy.UI.ViewModel\Pharmacy.UI.ViewModel.csproj" />
     <ProjectReference Include="..\Pharmacy.UI\Pharmacy.UI.csproj" />
   </ItemGroup>
