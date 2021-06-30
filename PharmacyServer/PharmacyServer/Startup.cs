@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Pharmacy.BL.Contract;
+using Pharmacy.BL.Services;
 
 namespace PharmacyServer
 {
@@ -24,6 +26,9 @@ namespace PharmacyServer
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pharmacy APIs", Version = "v1" });
             });
+
+            services.AddScoped<IPharmacyService, PharmacyService>();
+            services.AddScoped<IPeriodService, PeriodService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -32,6 +37,10 @@ namespace PharmacyServer
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pharmacy API V1");
+                });
             }
             else
             {
@@ -43,6 +52,12 @@ namespace PharmacyServer
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
+    
 }
