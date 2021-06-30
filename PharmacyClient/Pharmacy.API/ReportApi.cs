@@ -15,27 +15,27 @@ namespace Pharmacy.API
         {
         }
 
-        public Task<ApiResult<PeriodReportResponse>> GetReportPeriodAsync(DateTime start, DateTime end, CancellationToken token, string category = null)
+        public Task<ApiResult<PeriodReportResponse>> GetReportPeriodAsync(int periodId, string category, CancellationToken token)
         {
-            return _client.GetAsync(GetRequestUrl($"Report/period?start={start}&end={end}&category={category}"), token)
+            return _client.GetAsync(GetRequestUrl($"Report/period?periodId={periodId}&category={category}"), token)
                           .ReadAsJsonAsync<ApiResult<PeriodReportResponse>>();
         }
 
-        public Task<ApiResult<PeriodReportResponse>> GetSelledPeriodAsync(DateTime start, DateTime end, CancellationToken token)
+        public Task<ApiResult<PeriodReportResponse>> GetSelledPeriodAsync(int periodId, CancellationToken token)
         {
-            return _client.GetAsync(GetRequestUrl($"Report/selled?start={start}&end={end}"), token)
+            return _client.GetAsync(GetRequestUrl($"Report/selled?periodId={periodId}"), token)
                           .ReadAsJsonAsync<ApiResult<PeriodReportResponse>>();
         }
 
-        public Task<ApiResult<PeriodReportResponse>> GetSellingPeriodAsync(DateTime start, DateTime end, CancellationToken token)
+        public Task<ApiResult<PeriodReportResponse>> GetSellingPeriodAsync(int periodId, CancellationToken token)
         {
-            return _client.GetAsync(GetRequestUrl($"Report/selling?start={start}&end={end}"), token)
+            return _client.GetAsync(GetRequestUrl($"Report/selling?periodId={periodId}"), token)
                           .ReadAsJsonAsync<ApiResult<PeriodReportResponse>>();
         }
 
-        public Task<ApiResult<PeriodReportResponse>> GetReturnedPeriodAsync(DateTime start, DateTime end, CancellationToken token)
+        public Task<ApiResult<PeriodReportResponse>> GetReturnedPeriodAsync(int periodId, CancellationToken token)
         {
-            return _client.GetAsync(GetRequestUrl($"Report/returned?start={start}&end={end}"), token)
+            return _client.GetAsync(GetRequestUrl($"Report/returned?periodId={periodId}"), token)
                           .ReadAsJsonAsync<ApiResult<PeriodReportResponse>>();
         }
     }

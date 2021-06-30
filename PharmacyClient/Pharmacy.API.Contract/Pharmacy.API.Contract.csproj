@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PharmacyServer\DAL\Pharmacy.DAL\Pharmacy.DAL.csproj" />
     <ProjectReference Include="..\..\PharmacyServer\Pharmacy.Core\Pharmacy.Domain.csproj" />
   </ItemGroup>
 
